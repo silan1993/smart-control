@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p.login Sign Up
+  form(action='/signup',method='post')
+        div.input
+            span.label Mobile: &nbsp;
+            input(type="text", name="mobile")
+        br
+        div.input
+            span.label Password: &nbsp;
+            input(type="password", name="password")
+        br
+        div
+            span.label Role: &nbsp;
+            select(name="role")
+                option(value='admin') Admin
+                option(value='user' selected='') User
+        br
+        br
+        div
+            input(type="submit", value="Signup")
